@@ -15,8 +15,8 @@
 </script>
 <template>
     <nav class="pagination is-right" role="navigation">
-        <a @click="prevPage" class="pagination-previous">Previous</a>
-        <a @click="nextPage" class="pagination-next">Next page</a>
+        <a @click="prevPage" class="pagination-previous">Anterior</a>
+        <a @click="nextPage" class="pagination-next">Siguiente</a>
         <ul class="pagination-list">
         <li v-if="page > 1">
             <a @click="startPage" class="pagination-link">1</a>
