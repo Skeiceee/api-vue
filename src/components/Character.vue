@@ -1,8 +1,18 @@
 <script setup>
+    import { defineEmits } from 'vue';
+
     const { image, name } = defineProps({
+        id: Number,
         image: String,
         name: String,
     })
+
+    const emit = defineEmits (['showModal']);
+    
+    const showMore = (id) => {
+        console.log('entre')
+        emit('showModal', id);
+    }
 </script>
 
 <template>
@@ -13,7 +23,7 @@
             </div>
             <div class="card-content">
                 <h3 class="title is-size-4">{{ name }}</h3>
-                <button class="button is-success is-small">Ver más...</button>
+                <button class="button is-success is-small" @click="showMore(id)">Ver más...</button>
             </div>
         </div>
     </div>
